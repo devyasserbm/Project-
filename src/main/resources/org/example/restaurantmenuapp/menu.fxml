@@ -1,0 +1,17 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.restaurantmenuapp.RestaurantMenuController">
+    <Label text="Restaurant Menu" style="-fx-font-size: 20px;" />
+    <ScrollPane fitToWidth="true">
+        <ListView fx:id="menuListView" />
+    </ScrollPane>
+    <TextArea fx:id="orderTextArea" promptText="Your order will appear here..." editable="false" />
+    <TextArea fx:id="notesTextArea" promptText="Add notes to your order..." />
+    <Label fx:id="totalLabel" text="Total: $0.00" />
+    <Button text="Generate Bill" onAction="#generateBill" />
+</VBox>
